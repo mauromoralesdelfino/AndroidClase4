@@ -32,6 +32,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
         holder.txtNombre.setText(p.getNombre());
         holder.txtApellido.setText(p.getApellido());
+        holder.setPosition(position);
 
     }
 

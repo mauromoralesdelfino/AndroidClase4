@@ -14,7 +14,10 @@ public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClic
     TextView txtNombre;
     TextView txtApellido;
     MainActivity main;
-    int posicion;
+    private int position;
+
+    public void setPosition(int position)
+    {     this.position = position; }
 
     public MyViewHolder(View itemView, MainActivity main) {
         super(itemView);
@@ -28,10 +31,12 @@ public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClic
 
     @Override
     public void onClick(View v) {
-        posicion = v.getId();
+       // posicion = v.getId();
+
         Log.d("CLick","Se hizo clien en la view");
+       Log.d("CLick", Integer.toString(position));
         //Llamar metodo activity
        // main.Llamar(main.personas.lastIndexOf());
-        main.Llamar(posicion);
+       main.Llamar(position);
     }
 }
